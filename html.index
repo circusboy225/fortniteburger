@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Durr Burger Music</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f8f8f8;
+        }
+        img {
+            cursor: pointer;
+            width: 300px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <audio id="music" src="songsong.mp3"></audio>
+    <img id="burger" src="burger.png" alt="Durr Burger">
+
+    <script>
+        document.getElementById("burger").addEventListener("click", function() {
+            let music = document.getElementById("music");
+            if (music.paused) {
+                music.play();
+            } else {
+                music.pause();
+                music.currentTime = 0;
+            }
+        });
+    </script>
+</body>
+</html>
